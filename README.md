@@ -43,3 +43,21 @@ In a **Monolithic** architecture, the entire application is developed as a singl
 - **For easier hiring and onboarding:** Since monolithic services are usually developed using a single technology stack, and have their components tightly coupled, in a single place they are easier to understand, making it easier to hire and onboard new developers.
 
 - **When you want easier sharing of code and data:** Monolithic architecture has all its components in a single place, making it easier to share code and data between different components of the application.
+
+## Migration from Monolithic to Microservices
+
+Migrating from a Monolithic to a Microservices architecture is a complex process that requires careful planning and execution. Here are some key steps to consider when migrating:
+
+1. **Identify business functionalities:** Identify the different business functionalities of the application and break them down into separate services. Better understanding DDD (Domain-Driven Design) can help in this process.
+
+1. **Avoid too much granularity:** Avoid breaking down the application into too many microservices, as this can lead to complexity and performance issues.
+
+1. **Check for dependencies:** Identify dependencies between different components of the application and ensure that they are properly managed in the microservices architecture. This can avoid you from having a distributed monolith.
+
+1. **Plan the migration of the database:** Migrating from a monolithic database to a microservices architecture can be challenging. Plan the migration carefully and consider using separate databases for each service.
+
+1. **Don't be afraid about data duplication:** In a microservices architecture, it's common to have data duplication between services. This can help improve performance and scalability.
+
+1. **Eventual consistency:** In a microservices architecture, services communicate asynchronously through events. This can lead to eventual consistency issues that need to be carefully managed.
+
+1. **Start from the edges:** Start by breaking down the application from the edges, i.e., the parts of the application that are more loosely coupled. This can help you gain experience with microservices architecture before tackling the more complex parts of the application.
