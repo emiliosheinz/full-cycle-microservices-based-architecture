@@ -44,7 +44,7 @@ In a **Monolithic** architecture, the entire application is developed as a singl
 
 - **When you want easier sharing of code and data:** Monolithic architecture has all its components in a single place, making it easier to share code and data between different components of the application.
 
-## Migration from Monolithic to Microservices
+## Migration from Monolithic to Microservices Architectures
 
 Migrating from a Monolithic to a Microservices architecture is a complex process that requires careful planning and execution. Here are some key steps to consider when migrating:
 
@@ -61,3 +61,27 @@ Migrating from a Monolithic to a Microservices architecture is a complex process
 1. **Eventual consistency:** In a microservices architecture, services communicate asynchronously through events. This can lead to eventual consistency issues that need to be carefully managed.
 
 1. **Start from the edges:** Start by breaking down the application from the edges, i.e., the parts of the application that are more loosely coupled. This can help you gain experience with microservices architecture before tackling the more complex parts of the application.
+
+## Characteristics of a Microservice Architecture
+
+The _Characteristics of a Microservice Architecture_ section in Martin Fowler's article[^2] on microservices highlights several key features of this architectural style:
+
+[^2]: https://martinfowler.com/articles/microservices.html
+
+1. **Componentization via Services:** Microservices break down an application into smaller, independent services. Each service is a component that can be developed, deployed, and scaled independently.
+
+1. **Organized Around Business Capabilities:** Unlike traditional monolithic architectures which are often organized around technical layers (e.g., UI, business logic, database), microservices should be structured around business capabilities. Each service focuses on a specific business function.
+
+1. **Products, Not Projects:** Teams using microservices are aligned to long-lived products rather than short-term projects. This encourages a focus on continuous delivery and improvement.
+
+1. **Smart Endpoints and Dumb Pipes:** Microservices emphasize smart endpoints that handle the logic and processing, while the communication pipes between services are simple. This contrasts with traditional enterprise service buses that handle much of the processing.
+
+1. **Decentralized Governance:** Microservice architectures favor decentralized governance and diverse technology stacks. This allows teams to choose the best tools and technologies for their specific needs.
+
+1. **Decentralized Data Management:** Each microservice manages its own database, which helps avoid the complexities of a single centralized database and allows for polyglot persistence (using different data storage technologies).
+
+1. **Infrastructure Automation:** The adoption of DevOps practices, continuous integration, and continuous deployment are essential. Automation of infrastructure and deployment processes is critical to manage the complexity of multiple services.
+
+1. **Design for Failure:** Microservices are designed to handle failure gracefully. Each service should be resilient and able to recover from failures, minimizing the impact on the overall system.
+
+1. **Evolutionary Design:** The architecture supports the evolutionary design, allowing systems to evolve over time. This is crucial for adapting to changing business requirements and technologies.
