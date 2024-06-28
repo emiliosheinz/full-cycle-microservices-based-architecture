@@ -85,3 +85,19 @@ The _Characteristics of a Microservice Architecture_ section in Martin Fowler's 
 1. **Design for Failure:** Microservices are designed to handle failure gracefully. Each service should be resilient and able to recover from failures, minimizing the impact on the overall system.
 
 1. **Evolutionary Design:** The architecture supports the evolutionary design, allowing systems to evolve over time. This is crucial for adapting to changing business requirements and technologies.
+
+## Resilience in Microservices Architecture
+
+Resilience is the ability of a system to recover from failures and continue to function. It reduces the risks of data loss, downtime, and service disruptions. In a microservices architecture, resilience is crucial due to the distributed nature of the services. Here are some key strategies to improve resilience in microservices:
+
+1. **Protect and be protected:** A service in a distributed architecture should adopt mechanisms to preserve its own integrity and protect itself from failures. At the same time, it should be designed to be resilient to failures in other services.
+
+1. **Health Checks:** Implement health checks to monitor the system's status and detect failures early, allowing you to take corrective actions before they impact users. It's important to mention that health checks should actually check the system's health, not just return a HTML with 200 status code.
+
+1. **Rate Limiting:** Implement rate limiting to prevent abuse and protect the system from excessive traffic, ensuring that it remains responsive and available to legitimate users.
+
+1. **Circuit Breaker:** Circuit breakers can be used to temporarily block requests to a failing service and redirect them to a fallback mechanism. Preventing cascading failures.
+
+1. **API Gateway:** An API Gateway can be used to manage incoming requests, enforce policies, and provide a unified interface to the underlying services. It's important to mention that it can be use to implement rate limiting and circuit breakers, for example.
+
+1. **Service Mesh:** A service mesh can be used to manage service-to-service communication, provide observability, and enforce security policies. It can also help with resilience by providing features like circuit breaking, retries, and timeouts.
