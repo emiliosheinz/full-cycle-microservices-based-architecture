@@ -101,3 +101,9 @@ Resilience is the ability of a system to recover from failures and continue to f
 1. **API Gateway:** An API Gateway can be used to manage incoming requests, enforce policies, and provide a unified interface to the underlying services. It's important to mention that it can be use to implement rate limiting and circuit breakers, for example.
 
 1. **Service Mesh:** A service mesh can be used to manage service-to-service communication, provide observability, and enforce security policies. It can also help with resilience by providing features like circuit breaking, retries, and timeouts.
+
+1. **Work Asynchronously:** When possible, design services to work asynchronously, using messaging brokers or event-driven architectures. This can help decouple services and improve resilience by allowing services to process requests at their own pace.
+
+1. **Retry Mechanisms:** Implement retry mechanisms in services to handle transient failures. Retrying requests can help improve the chances of success when dealing with temporary issues. It's important to mention that retries should be implemented with backoff strategies to avoid overwhelming the system.
+
+1. **Delivery Guarantees:** Use messaging systems that provide delivery guarantees, such as at-least-once or exactly-once semantics. This ensures that messages are not lost and are processed correctly over time.
