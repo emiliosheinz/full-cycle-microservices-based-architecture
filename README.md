@@ -111,3 +111,11 @@ Resilience is the ability of a system to recover from failures and continue to f
 1. **Transaction Outbox:** This pattern ensures that messages are stored in a database before they are sent to a messaging system. This guarantees that messages are not lost if the service fails before sending them.
 
 1. **Fallback Policies:** These are mechanisms that define what to do when a service fails. Fallback policies can include returning cached data, providing default responses, or redirecting requests to alternative services.
+
+## Coreography and Orchestration
+
+In a microservices architecture, services need to communicate with each other to perform simple and complex operations. Two common patterns for managing this communication are **Coreography** and **Orchestration**.
+
+1. **Coreography:** In the coreography pattern, services communicate directly with each other to coordinate their actions. Each service is responsible for its part of the process and reacts to events or messages from other services. This is a decentralized pattern and can be more flexible, but it can also be more complex to manage.
+
+1. **Orchestration:** In the orchestration pattern, a central orchestrator service coordinates the actions of other services. The orchestrator service defines the sequence of steps and controls the flow of the process. This is a centralized pattern and can be easier to manage, but it can also introduce a single point of failure.
