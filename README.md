@@ -107,3 +107,7 @@ Resilience is the ability of a system to recover from failures and continue to f
 1. **Retry Mechanisms:** Implement retry mechanisms in services to handle transient failures. Retrying requests can help improve the chances of success when dealing with temporary issues. It's important to mention that retries should be implemented with backoff strategies to avoid overwhelming the system.
 
 1. **Delivery Guarantees:** Use messaging systems that provide delivery guarantees, such as at-least-once or exactly-once semantics. This ensures that messages are not lost and are processed correctly over time.
+
+1. **Transaction Outbox:** This pattern ensures that messages are stored in a database before they are sent to a messaging system. This guarantees that messages are not lost if the service fails before sending them.
+
+1. **Fallback Policies:** These are mechanisms that define what to do when a service fails. Fallback policies can include returning cached data, providing default responses, or redirecting requests to alternative services.
