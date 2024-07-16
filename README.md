@@ -128,4 +128,15 @@ There are several patterns that can be used to design and implement microservice
 
 1. **Decompose by business capability:** This pattern involves breaking down the application into services based on business capabilities. Each service is responsible for a specific business function, making it easier to understand and maintain. This pattern is useful in scenarios where we are migrating from a monolithic architecture to a microservices-based architecture, for example. 
 
+1. **Strangler Application:** This pattern involves gradually replacing a monolithic application with microservices. New features are implemented as microservices, while existing features are gradually migrated. This pattern is useful when you want to migrate from a monolithic architecture to a microservices architecture without disrupting the existing application.
+
+1. **ACL (Anti Corruption Layer):** This pattern involves creating a layer that translates data or business logics between different services. It helps integrating with third-party services or legacy systems without affecting the core services, for example. 
+
+1. **API Gateway [^3]:** This pattern involves using a single entry point to manage incoming requests, enforce policies, and provide a unified interface to the underlying services. It can help with security, rate limiting, and load balancing, for example.
+
+1. **BFF (Backend for Frontend):** This pattern involves creating a separate backend service for each frontend application. Each BFF service is tailored to the needs of a specific frontend application. This helps to reduce the complexity of the frontend and also the amount of data transferred between the frontend and backend, for example.
+
+
+[^3]: https://github.com/emiliosheinz/full-cycle-api-gateway
+
 
