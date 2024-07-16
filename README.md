@@ -119,3 +119,13 @@ In a microservices architecture, services need to communicate with each other to
 1. **Coreography:** In the coreography pattern, services communicate directly with each other to coordinate their actions. Each service is responsible for its part of the process and reacts to events or messages from other services. This is a decentralized pattern and can be more flexible, but it can also be more complex to manage.
 
 1. **Orchestration:** In the orchestration pattern, a central orchestrator service coordinates the actions of other services. The orchestrator service defines the sequence of steps and controls the flow of the process. This is a centralized pattern and can be easier to manage, but it can also introduce a single point of failure.
+
+## Patterns 
+
+There are several patterns that can be used to design and implement microservices architectures. Here are some common patterns and their use cases:
+
+1. **API Composition:** This pattern involves aggregating data or business logics from multiple services to provide a unified API to clients. It's useful when data or business logics from multiple services need to be available through a single endpoint, for example. On the other hand it can introduce tight coupling between services and increase latency and complexity.
+
+1. **Decompose by business capability:** This pattern involves breaking down the application into services based on business capabilities. Each service is responsible for a specific business function, making it easier to understand and maintain. This pattern is useful in scenarios where we are migrating from a monolithic architecture to a microservices-based architecture, for example. 
+
+
