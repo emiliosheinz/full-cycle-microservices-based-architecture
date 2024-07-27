@@ -136,6 +136,13 @@ There are several patterns that can be used to design and implement microservice
 
 1. **BFF (Backend for Frontend):** This pattern involves creating a separate backend service for each frontend application. Each BFF service is tailored to the needs of a specific frontend application. This helps to reduce the complexity of the frontend and also the amount of data transferred between the frontend and backend, for example.
 
+1. **Secret Manager:** This pattern involves using a centralized service to manage secrets, such as API keys, passwords, and certificates. This helps to improve security by centralizing the management of secrets and reducing the risk of exposure.
+
+1. **Logs standardization:** This pattern involves standardizing the format and structure of logs across services. It helps to improve observability and monitoring by making it easier to search, analyze, and correlate logs from different services.
+
+1. **Opent Telemety:** This pattern involves using open-source tools like Prometheus, Grafana, and Jaeger to monitor and trace services. It helps you to  improve observability and performance by providing insights into the behavior of multiple services working together.
+
+1. **Service Template:** This pattern involves creating a template for new services that includes common features like health checks, logging, and metrics. It helps to improve consistency and reduce the time required to develop new services.
 
 [^3]: https://github.com/emiliosheinz/full-cycle-api-gateway
 
