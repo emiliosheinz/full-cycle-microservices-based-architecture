@@ -146,4 +146,8 @@ There are several patterns that can be used to design and implement microservice
 
 [^3]: https://github.com/emiliosheinz/full-cycle-api-gateway
 
+## C4 Model
 
+The C4 model [^4] is a set of abstractions for describing the architecture of software systems. It was created by Simon Brown between 2006 and 2011 and consists of four levels: Context, Containers, Components, and Code. 
+
+[^4]: https://c4model.com/
