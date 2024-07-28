@@ -151,3 +151,27 @@ There are several patterns that can be used to design and implement microservice
 The C4 model [^4] is a set of abstractions for describing the architecture of software systems. It was created by Simon Brown between 2006 and 2011 and consists of four levels: Context, Containers, Components, and Code. 
 
 [^4]: https://c4model.com/
+
+### Context
+
+The **Context** level provides a high-level view of the system and its interactions with external actors. Detail isn't important here as this is your zoomed out view showing a big picture of the system landscape.
+
+![Context diagram](./docs/images/context.png)
+
+### Containers
+
+The **Containers** level zooms into the system and focuses on the high-level building blocks of the system. Containers are essentially seprarately runnable/deployable unuts that execute code or store data.
+
+![Containers diagram](./docs/images/container.png)
+
+### Components
+
+The **Components** level zooms into the containers and focuses on the internal components of the system. The components diagram show how a container is made up of a number of "components", what each of those components are, their responsibilities, and the technology/implmentation details.
+
+![Components diagram](./docs/images/component.png)
+
+### Code
+
+The **Code** level is the lowest level of the C4 model and focuses on the actual code of the system. This is an optional level of detail and is often available on-demand from tooling such as IDEs. Ideally this diagram would be automatically generated  and you should consider showing only those attributes and methods that allow you to tell the story that you want to tell. 
+
+![Code diagram](./docs/images/code.png)
