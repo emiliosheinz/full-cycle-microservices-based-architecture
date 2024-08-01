@@ -12,6 +12,26 @@ System_Boundary(digital_wallet, "Digital Wallet") {
   Container(ballance_service, "Balance Microservice", "TS", "Returns customer balance")
   Container(statement_service, "Stetement Microservice", "TS", "Returns customer statements")
   Container(payment_acl, "Payment ACL", "TS", "Anticorruption Layert for Payment Gateway")
+
+  ContainerDb(wallet_core_db, "Wallet DB", "MySQL")
+  Rel(wallet_core, wallet_core_db, "Uses", "MySQL Driver")
+
+  ContainerDb(balance_db, "Ballance DB", "MySQL")
+  Rel(ballance_service, balance_db, "Uses", "MySQL Driver")
+
+  ContainerDb(statement_db, "Statement DB", "MySQL")
+  Rel(statement_service, statement_db, "Uses", "MySQL Driver")
+
+  ContainerDb(payment_acl_db, "Payment ACL DB", "MySQL")
+  Rel(payment_acl, payment_acl_db, "Uses", "MySQL Driver")
+
+  Rel(client, spa, "Uses", "HTTPS")
+  Rel(spa, wallet_core, "Uses", "JSON/HTTPS")
+  Rel(spa, ballance_service, "Uses", "JSON/HTTPS")
+  Rel(spa, statement_service, "Uses", "JSON/HTTPS")
+
+  Rel(wallet_core, payment_acl, "Uses", "JSON/HTTPS")
+  Rel(payment_acl, payment_gateway, "Uses", "JSON/HTTPS")
 }
 
 @enduml
