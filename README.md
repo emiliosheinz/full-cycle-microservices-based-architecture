@@ -175,3 +175,9 @@ The **Components** level zooms into the containers and focuses on the internal c
 The **Code** level is the lowest level of the C4 model and focuses on the actual code of the system. This is an optional level of detail and is often available on-demand from tooling such as IDEs. Ideally this diagram would be automatically generated  and you should consider showing only those attributes and methods that allow you to tell the story that you want to tell. 
 
 ![Code diagram](./docs/images/code.png)
+
+## Architecture
+
+Below is the C4 Model that was created using PlantUML (with `.puml` files found in this repository). The system is composed of several services, each responsible for a specific business functionality. The services communicate with each other through well-defined APIs, and each service is independently deployable.
+
+![C4 Model](./docs/images/architecture.png)
